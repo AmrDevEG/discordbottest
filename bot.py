@@ -1,3 +1,4 @@
+import os
 import discord
 from discord.ext import commands
 import random
@@ -126,5 +127,5 @@ async def clear_command(ctx, amount: int):
     await ctx.send(f'🧹 تم حذف **{amount}** من الرسائل بنجاح!', delete_after=5)
 
 # ------------------- تشغيل البوت -------------------
-TOKEN = "MTM4MTMyNDI0MTIxOTIyNzY0OA.Gk2s2y.S6DskiyA8hfANEEy36mxonZQHs3UymC4xlcMbo"
+TOKEN = os.getenv("DISCORD_TOKEN")
 bot.run(TOKEN)
